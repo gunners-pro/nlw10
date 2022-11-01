@@ -2,10 +2,10 @@ import Fastify from "fastify";
 
 async function bootstrap() {
   const fastify = Fastify({
-    logger: true
-  })
+    logger: true,
+  });
 
-  await fastify.listen({ port: 3333 })
+  await fastify.listen({ port: 3333 });
 }
 
-bootstrap()
+bootstrap();
