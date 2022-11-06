@@ -36,6 +36,7 @@ export function AuthProvider({ children }) {
       '764625746035-7nur39f2fpb6ncrt991st2d8am7vfcr0.apps.googleusercontent.com',
     redirectUri: AuthSession.makeRedirectUri({ useProxy: true }),
     scopes: ['profile', 'email'],
+    selectAccount: true,
   });
 
   const signInWithGoogle = useCallback(async (access_token: string) => {
