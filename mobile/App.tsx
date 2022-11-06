@@ -8,11 +8,8 @@ import {
 } from '@expo-google-fonts/roboto';
 import { THEME } from './src/styles/theme';
 import { Loading } from './src/components/Loading';
-import { SignIn } from './src/screens/SignIn';
 import { AuthProvider } from './src/contexts/AuthContext';
-import { New } from './src/screens/New';
-import { Find } from './src/screens/Find';
-import { Pools } from './src/screens/Pools';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -25,7 +22,7 @@ export default function App() {
     <NativeBaseProvider theme={THEME}>
       <AuthProvider>
         <StatusBar style="light" />
-        {fontsLoaded ? <Pools /> : <Loading />}
+        {fontsLoaded ? <Routes /> : <Loading />}
       </AuthProvider>
     </NativeBaseProvider>
   );
