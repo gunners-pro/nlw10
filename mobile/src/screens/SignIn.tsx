@@ -7,7 +7,7 @@ import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 
 export function SignIn() {
-  const { signIn } = useAuth();
+  const { signIn, isUserLoading } = useAuth();
 
   return (
     <Center bg="gray.900" flex={1} p={7}>
@@ -18,6 +18,8 @@ export function SignIn() {
         type="SECONDARY"
         mt={12}
         onPress={signIn}
+        isLoading={isUserLoading}
+        _loading={{ color: 'white' }}
       />
 
       <Text color="white" textAlign="center" mt={4}>

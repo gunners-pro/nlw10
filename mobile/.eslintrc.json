@@ -36,10 +36,13 @@
     ],
     "consistent-return": "off",
     "react/jsx-no-bind": "off",
-    "no-unused-vars": [
-      1,
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
       {
-        "args": "none"
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
       }
     ],
     "react/require-default-props": "off",
