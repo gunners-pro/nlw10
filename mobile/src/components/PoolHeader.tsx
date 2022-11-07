@@ -1,10 +1,10 @@
 import { Heading, HStack, Text, VStack } from 'native-base';
 
-import { PoolPros } from './PoolCard';
+import { PoolProps } from './PoolCard';
 import { Participants } from './Participants';
 
 interface Props {
-  data: PoolPros;
+  data: PoolProps;
 }
 
 export function PoolHeader({ data }: Props) {
@@ -37,8 +37,8 @@ export function PoolHeader({ data }: Props) {
       </VStack>
 
       <Participants
-        count={data.count.participants}
-        participants={data.participants}
+        count={data._count.Participants}
+        participants={data.Participants}
       />
     </HStack>
   );
