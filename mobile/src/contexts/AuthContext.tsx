@@ -5,7 +5,6 @@ import {
   useMemo,
   useState,
 } from 'react';
-// import { GOOGLE_CLIENTE_ID } from 'react-native-dotenv';
 import * as Google from 'expo-auth-session/providers/google';
 import * as AuthSession from 'expo-auth-session';
 import * as WebBrowser from 'expo-web-browser';
@@ -32,8 +31,7 @@ export function AuthProvider({ children }) {
   const [isUserLoading, setIsUserLoading] = useState(false);
   const [user, setUser] = useState<User>({} as User);
   const [_request, response, promptAsync] = Google.useAuthRequest({
-    clientId:
-      '764625746035-7nur39f2fpb6ncrt991st2d8am7vfcr0.apps.googleusercontent.com',
+    clientId: process.env.GOOGLE_CLIENTE_ID,
     redirectUri: AuthSession.makeRedirectUri({ useProxy: true }),
     scopes: ['profile', 'email'],
     selectAccount: true,
